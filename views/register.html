@@ -15,12 +15,13 @@
     <section class="header-top-bar">
 
       <div class="logo-search-container">
-        <img src="/img/logo-mercado-liebre.svg" class="logo" alt="logo-mercado liebre" />
+        <a href="http://localhost:3000"><img src="/img/logo-mercado-liebre.svg" class="logo"
+            alt="logo-mercado liebre" /></a>
 
-        <section class="search-wrapper">
-          <input type="search" placeholder="Buscar productos, marcas" />
+        <form class="search-wrapper" action="" method="post">
+          <input type="search" placeholder="Buscar productos, marcas" required />
           <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </section>
+        </form>
       </div>
 
       <section class="text-header">
@@ -78,14 +79,16 @@
           <input class="input" type="password" name="User" placeholder="Nombre de usuari@" required>
         </div>
         <div class="wrapper-input">
-          <input class="input" type="password" name="Email" placeholder="Email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un email válido">
+          <input class="input" type="email" name="Email" placeholder="Email" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un email válido">
+          <span class="error">¡Email incorrecto! Por favor, ingresa un email válido.</span>
         </div>
         <div class="wrapper-input">
           <label class="label-registro">Fecha de nacimiento</label>
           <input class="input" type="date" name="Date">
         </div>
         <div class="wrapper-input">
-          <input class="input" type="password" name="Home" placeholder="Domicilio">
+          <input class="input" type="text" name="Home" placeholder="Domicilio">
         </div>
         <div class="wrapper-input">
           <label class="label-registro">Perfil del usuario</label>
@@ -135,7 +138,6 @@
           <button type="reset">Limpiar</button>
         </div>
       </form>
-      
     </div>
   </main>
 </body>

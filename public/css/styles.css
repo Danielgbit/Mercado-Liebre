@@ -27,9 +27,14 @@ body header {
 
 }
 
-.logo-search-container .logo {
+
+.logo-search-container a {
     width: 50%;
     padding: 10px;
+}
+
+.logo-search-container a .logo {
+    width: 100%;
 }
 
 .logo-search-container .search-wrapper {
@@ -44,6 +49,7 @@ body header {
     border: none;
     position: relative;
     outline: none;
+    padding-left: 5px;
 }
 
 .search-wrapper button {
@@ -70,16 +76,12 @@ body header {
 
 .titulares {
     font-size: 1.25rem;
-    margin: 20 0px;
+    margin-top: 30px;
     padding: 0 35px;
     color: #666;
     width: 100%;
-
-
-}
-
-.titulares b {
     text-align: left;
+    font-weight: 400;
 }
 
 
@@ -88,12 +90,22 @@ body header {
 
 /* DESCRIPCION ARTICULOS */
 
+
 .articles-container .descripcion {
     font-size: 12px;
     font-weight: 400;
     color: #666;
-    margin: 5px 0 0 0;
-    display: none;
+    display: block;
+    opacity: 0;
+    margin: 0;
+    padding-top: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.articles-container .descripcion:hover {
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+    padding-bottom: 5px;
 }
 
 
@@ -152,6 +164,13 @@ body header {
 .copyright {
     text-align: left;
     font-size: 12px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 400;
+    color: #666;
+    padding: 10px 20px;
 }
 
 
@@ -176,50 +195,60 @@ footer {
     margin-top: 30px;
     background-color: white;
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-footer-container {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 footer ul {
     list-style-type: none;
     margin-left: 0;
     padding-left: 0;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
 
 }
 
+
 footer .fa-solid {
     font-size: 2em;
     margin-bottom: 10px;
     color: #1259c3;
+    transition: transform 0.4s ease-in-out;
 }
 
 footer .fa-solid:hover {
-    color: #03264C;
-
-    ;
+    color: #39b54a;
+    transform: translateY(-5px);
 }
 
 input:invalid {
     border: red;
     border-color: red;
-  }
-  
-  input:invalid:after {
+}
+
+input:invalid:after {
     content: "El formato no es válido.";
     color: red;
     display: block;
     font-size: 12px;
     margin-top: 5px;
-  }
-  
+}
+
 
 /* PRECIO Y DESCUENTOS */
 
 section .price-card-wrapper {
     display: flex;
     align-items: center;
+    padding-top: 5px;
 
 }
 
@@ -242,12 +271,12 @@ section .price-card-wrapper {
 
 /* ARTICULOS */
 body main {
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 40px 0 0 0;
+    padding: 40px 0;
 }
 
 
@@ -259,7 +288,7 @@ body main .articles-container {
     flex-direction: column;
     width: 100%;
     flex-wrap: wrap;
-    margin: 35px 0;
+    margin: 10px 0 35px 0;
 }
 
 
@@ -268,7 +297,7 @@ body main .articles-container {
 
 .content-article {
     border-top: solid 1px #ebebeb;
-    padding: 15px;
+    padding: 15px 15px 5px 15px;
     width: 80%;
     background-color: white;
     position: relative;
@@ -327,7 +356,7 @@ body main .articles-container {
 
     .content-article:hover {
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        transform: translateY(5px) ;
+        transform: translateY(5px);
 
     }
 
@@ -356,7 +385,7 @@ body main .articles-container {
 
     .price-card-wrapper .descuentos {
         font-size: 0.75rem;
-        text-align: center;
+        text-align: left;
         padding: 0 0 0 0;
         align-self: flex-start;
         width: 60%;
@@ -372,14 +401,6 @@ body main .articles-container {
         padding: 0 4%;
     }
 
-    .articles-container .descripcion {
-        display: block;
-        opacity: 0;
-    }
-
-    .articles-container .descripcion:hover {
-        opacity: 0.9;
-    }
 
 }
 
@@ -397,7 +418,7 @@ body main .articles-container {
     .header-top-bar {
         display: flex;
         align-items: center;
-        width: 100vw;
+        width: 100%;
     }
 
 
@@ -436,6 +457,7 @@ body main .articles-container {
         flex-direction: row;
         justify-content: space-between;
         margin: 20px 0 0 0;
+        padding-right: 40px;
     }
 
     /* MENU HAMBURGUESA OCULTO */
@@ -464,6 +486,7 @@ body main .articles-container {
 
     .logo-search-container {
         width: 70%;
+        gap: 50px
     }
 
 
@@ -621,7 +644,8 @@ body main .articles-container {
 
     .content-footer-container {
         display: flex;
-
+        padding: 20px 10px;
+        flex-direction: row;
     }
 
     footer {
@@ -634,6 +658,11 @@ body main .articles-container {
     footer ul {
         width: 100%
     }
+
+    .nav-bar-top,
+    .nav-bar-bottom {
+        gap: 30px;
+    }
 }
 
 
@@ -641,7 +670,9 @@ body main .articles-container {
 
     .articles-container .descripcion {
         font-size: 0.75rem;
+
     }
+
 
     .price-card-wrapper .precios {
         font-size: 0.875rem;
@@ -723,7 +754,7 @@ body main .articles-container {
 .card-login {
     background-color: #ebebeb;
     width: 80vw;
-    height: 70vh;
+    height: auto;
     border-radius: 20px;
     margin: 100px 0;
     padding: 20px;
@@ -733,8 +764,20 @@ body main .articles-container {
 .form-container {
     display: flex;
     flex-direction: column;
-    padding: 40px 10px 50px 10px;
+    padding: 40px 10px 0 10px;
     height: 100%;
+}
+
+.form-container .error {
+    display: none;
+    color: red;
+}
+
+
+.form-container input:valid+.error {
+    display: block;
+    font-size: 11px;
+    margin-top: 10px;
 }
 
 .form-container label {
@@ -747,6 +790,7 @@ body main .articles-container {
     border-radius: 5px;
     outline: none;
     border: none;
+    padding: 0 10px;
 }
 
 .form-container input::placeholder {
@@ -758,6 +802,7 @@ body main .articles-container {
 .form-container input:focus {
     padding: 10px;
 }
+
 
 
 .form-container button {
@@ -778,8 +823,9 @@ body main .articles-container {
 
 #login-body {
     background-color: white;
-
 }
+
+
 
 
 
@@ -828,7 +874,23 @@ body main .articles-container {
     border: none;
     outline: none;
     border-radius: 3px;
+    padding: 0 5px;
 }
+
+.form-container-register .error {
+    display: none;
+    color: red;
+}
+
+.wrapper-input input:valid + .error {
+    display: block;
+    content: "El formato no es válido.";
+    color: red;
+    display: block;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
 
 
 .wrapper-input .input:focus {
