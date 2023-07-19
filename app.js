@@ -7,10 +7,10 @@ app.use( express.static('public') );
 
 
 app.listen(process.env.PORT, () => {
-    console.log('El servidor ' +  process.env.PORT  + ' http://localhost:3000/home esta funcionando');
+    console.log('El servidor ' +  process.env.PORT  + ' http://localhost:3000 esta funcionando');
 })
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/views/home.html'));
 })
 
