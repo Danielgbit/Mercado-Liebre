@@ -326,9 +326,8 @@ body main .articles-container {
     transition: transform 0.3s;
 }
 
-.content-article i:hover {
+.content-article:hover i {
     transform: rotate(-90deg);
-
 }
 
 .content-article img {
